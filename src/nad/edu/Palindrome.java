@@ -60,4 +60,13 @@ public class Palindrome {
         System.out.println(text + " - is a palindrome - " + isPalindrom3(text));
     }
 }
+/**
+ * The first way:
+ * Коту тащат уток - is a palindrome - true
+ * The second way:
+ * Коту тащат уток - is a palindrome - true
+ * The third way:
+ * Коту тащат уток - is a palindrome - true
+ **/
+
 

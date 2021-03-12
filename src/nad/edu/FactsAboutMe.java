@@ -38,3 +38,14 @@ public class FactsAboutMe {
         System.out.println(line);
     }
 }
+/**
+ * My age is 23 years.
+ * I was born in 1998 year.
+ * I'd like to get 200000 $ a month.
+ * I live 34830000 minutes.
+ * My height is 165.5 сms.
+ * I've watched 67.8 anime.
+ * The first letter of my last name is N.
+ * I'm a girl. It is true.
+ * Thanks for attention!
+ **/

@@ -32,3 +32,4 @@ public class Integral {
         System.out.println("The area of the cut-off sinusoid: " + getIntegral(7));
     }
 }
+// The area of the cut-off sinusoid: 1.6852711508008378
