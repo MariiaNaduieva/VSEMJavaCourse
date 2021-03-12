@@ -24,7 +24,7 @@ public class Palindrome {
 
     //buid a reverse string
     public static boolean isPalindrom2(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // garbage removal
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); //garbage removal
         text = text.toLowerCase();
         boolean result = true;
         String reversed = "";
