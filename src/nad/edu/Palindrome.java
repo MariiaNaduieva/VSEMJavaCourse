@@ -10,7 +10,7 @@ package nad.edu;
 
 public class Palindrome {
     public static boolean isPalindrom1(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // garbage removal
         text = text.toLowerCase();
         boolean result = true;
         for (int i = 0; i < text.length(); i++) {
@@ -24,7 +24,7 @@ public class Palindrome {
 
     //buid a reverse string
     public static boolean isPalindrom2(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // garbage removal
         text = text.toLowerCase();
         //write code here
         boolean result = true;
@@ -37,7 +37,7 @@ public class Palindrome {
 
     // use string builder
     public static boolean isPalindrom3(String text) {
-        text = text.replaceAll("[^A-Za-zА-Яа-я]", "");
+        text = text.replaceAll("[^A-Za-zА-Яа-я]", ""); // garbage removal
         text = text.toLowerCase();
         StringBuilder sb = new StringBuilder(text);
         String reversed = sb.reverse().toString();
@@ -60,3 +60,4 @@ public class Palindrome {
         System.out.println(text + " - is a palindrome - " + isPalindrom3(text));
     }
 }
+

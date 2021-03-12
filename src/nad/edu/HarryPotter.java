@@ -18,12 +18,6 @@ public class HarryPotter {
         String text = new String(Files.readAllBytes(Paths.get("C:\\Users\\Maria\\Desktop\\harry.txt")));
         text = text.replaceAll("[^A-Za-z ']", "");
         String[] words = text.split(" +");
-        int counter = 0;
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() == 12) {
-                counter++;
-            }
-        }
         String stringOfDistincts = "";
         for (int i = 0; i < words.length; i++) {
             if (!stringOfDistincts.contains(words[i])) {
@@ -39,3 +33,107 @@ public class HarryPotter {
         }
     }
 }
+
+/**
+ * 'Alohomora
+ * 'Atta
+ * 'Cause
+ * 'Course
+ * 'Dumbledore
+ * 'Harry's
+ * 'Jordan
+ * 'Mr
+ * 'NMat
+ * 'Oh
+ * 'Pig
+ * 'Quidditch'
+ * 'Scuse
+ * 'Snot
+ * 'Up'
+ * 'Yes
+ * 'You
+ * 'YouKnowWho'
+ * 'cause
+ * 'cept
+ * 'f'
+ * 'gar'
+ * 'hocus
+ * 'm'
+ * 'please'
+ * 's'
+ * 'smatter
+ * 'there's
+ * 'til
+ * 'to
+ * 'undred
+ * 'wand
+ * AAAAAAAAAARGH
+ * ALBUS
+ * ALL
+ * ALLEY
+ * ALLOWED
+ * AM
+ * AND
+ * ANYTHING
+ * AT
+ * Aaah
+ * Aargh
+ * Abbott
+ * Abou'
+ * About
+ * Absolutely
+ * According
+ * Adalbert
+ * Add
+ * Adrian
+ * Africa
+ * African
+ * After
+ * Against
+ * Ages
+ * Agrippa
+ * Ah
+ * Aha
+ * Ahead
+ * Ahem
+ * Ahern
+ * Alas
+ * Alberic
+ * Albus
+ * Algie
+ * Alicia
+ * All
+ * Alley
+ * Although
+ * Always
+ * Am
+ * An'
+ * And
+ * Angelina
+ * Another
+ * AntiCheating
+ * AntiDark
+ * Anyone
+ * Anythin'
+ * Anything
+ * Anyway
+ * Apothecary
+ * Are
+ * Aren't
+ * Argus
+ * Around
+ * Arsenius
+ * Arts
+ * As
+ * Asked
+ * Astronomy
+ * At
+ * Ate
+ * August
+ * Aunt
+ * Auntie
+ * BC
+ * BED
+ * BEHIND
+ */
+
