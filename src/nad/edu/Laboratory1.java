@@ -27,7 +27,7 @@ public class Laboratory1 {
             }
         }
 
-        //2. Count the LINES where the word "Harry" is met.
+        // 2. Count the LINES where the word "Harry" is met.
         String textLines = new String(Files.readAllBytes(Paths.get("C:\\Users\\Maria\\Desktop\\harry.txt")));
         String[] lines = textLines.split("\\n");
         textLines = textLines.replaceAll("[^A-Za-z ']", "");
@@ -47,7 +47,6 @@ public class Laboratory1 {
         }
         String[] distincts = stringOfDistincts.split(" ");
 
-
         // 4.  How many distinct words begin from the letter "C".
         int counterC = 0;
         for (int i = 0; i < distincts.length; i++) {
@@ -58,25 +57,22 @@ public class Laboratory1 {
 
         //5. Create an array of hashes.
         int[] hashes = new int[distincts.length];
+        for (int i = 0; i < hashes.length; i++) {
+            hashes[i] = distincts[i].hashCode();
+        }
 
         // 6. Count the intersections of hashes.
         Arrays.sort(hashes);
         int counterHashes = 0;
         for (int i = 0; i < hashes.length - 1; i++) {
-            if (hashes[i] == hashes[i+1]) {
+            if (hashes[i] == hashes[i + 1]) {
                 counterHashes++;
             }
         }
 
-
-        System.out.println("Count the LINES where the word \"Harry\" is met: " + counterHarry);
-        System.out.println("The longest word in the text: " + longestWord);
-        System.out.println("Number of distinct words begin from the letter \"C\": " + counterC);
-        System.out.println("Count the intersections of hashes: " + counterHashes);
-        //System.out.println("Number of distinct words: " + distincts.length); //6000 distincts words
-        System.out.println("Array of distinct words:");
-        for (int i = 0; i < 6000; i++) {
-            // System.out.println(distincts[i]);
-        }
+        System.out.println("The longest word in the text: " + longestWord); // interestinglooking
+        System.out.println("Count the LINES where the word \"Harry\" is met: " + counterHarry); // 1084
+        System.out.println("Number of distinct words begin from the letter \"C\": " + counterC); // 80
+        System.out.println("Count the intersections of hashes: " + counterHashes); // 0
     }
 }
