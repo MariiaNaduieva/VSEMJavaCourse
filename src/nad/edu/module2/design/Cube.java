@@ -29,29 +29,29 @@ public class Cube {
     }
 
     public double getDiagonalCube() {
-        return (cubeEdge * Math.sqrt(3));
+        return (this.getCubeEdge() * Math.sqrt(3));
     }
 
     public double getDiagonalEdge() {
-        return (cubeEdge * Math.sqrt(2));
+        return (this.getCubeEdge() * Math.sqrt(2));
     }
 
     public double getPerimeter() {
-        return (12 * cubeEdge);
+        return (12 * this.getCubeEdge());
     }
 
     public double getArea() {
-        return (6 * Math.pow(cubeEdge, 2));
+        return (6 * Math.pow(this.getCubeEdge(), 2));
     }
 
-    public double getVolume(){
-       return (Math.pow(cubeEdge,3));
+    public double getVolume() {
+        return (Math.pow(this.getCubeEdge(), 3));
     }
 
     @Override
     public String toString() {
         return "Cube {" +
-                "cubeEdge = " + cubeEdge +
+                "cubeEdge = " + this.getCubeEdge() +
                 '}';
     }
 
@@ -68,3 +68,12 @@ public class Cube {
         return Objects.hash(getCubeEdge());
     }
 }
+/*
+    Cube {cubeEdge = 3.0}
+    Cube perimeter: 36.0
+    Cube area: 54.0
+    Diagonal of the edge of the cube: 4.242640687119286
+    Cube diagonal: 5.196152422706632
+    Cube volume: 27.0
+    HashCode: 1074266143
+ */
