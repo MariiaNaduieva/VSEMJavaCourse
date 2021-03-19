@@ -1,4 +1,4 @@
-package nad.edu;
+package nad.edu.module1;
 
 /**
  * @author Mariia Naduieva
