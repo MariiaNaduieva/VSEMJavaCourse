@@ -11,7 +11,7 @@ import java.util.Objects;
  **/
 
 public class Cube {
-    private double cubeEdge;
+    private double cubeEdge; // One variable because in a cube all edges are equal
 
     public Cube() {
     }
