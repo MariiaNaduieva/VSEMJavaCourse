@@ -1,4 +1,4 @@
-package nad.edu.inheritance;
+package nad.edu.module2.inheritance;
 
 import java.util.Objects;
 
