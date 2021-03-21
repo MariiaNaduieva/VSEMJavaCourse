@@ -1,4 +1,4 @@
-package nad.edu.module1.inheritance;
+package nad.edu.inheritance;
 
 import java.time.LocalDate;
 import java.util.Objects;
