@@ -21,21 +21,21 @@ public class Monitor extends Rectangle {
     public Monitor() {
     }
 
-    public Monitor(String manufacturer, String displayType, String colour, int gigahertz, String screenResolution) {
+    public Monitor(String manufacturer, String displayType, String colour, int hertz, String screenResolution) {
         this.manufacturer = manufacturer;
         this.displayType = displayType;
         this.colour = colour;
-        this.gigahertz = gigahertz;
+        this.hertz = hertz;
         this.screenResolution = screenResolution;
     }
 
     public Monitor(int length, int width, String manufacturer, String displayType, String colour,
-                   int gigahertz, String screenResolution) {
+                   int hertz, String screenResolution) {
         super(length, width);
         this.manufacturer = manufacturer;
         this.displayType = displayType;
         this.colour = colour;
-        this.gigahertz = gigahertz;
+        this.hertz = hertz;
         this.screenResolution = screenResolution;
     }
 
@@ -63,12 +63,12 @@ public class Monitor extends Rectangle {
         this.colour = colour;
     }
 
-    public int getGigahertz() {
-        return gigahertz;
+    public int getHertz() {
+        return hertz;
     }
 
-    public void setGigahertz(int gigahertz) {
-        this.gigahertz = gigahertz;
+    public void setHertz(int hertz) {
+        this.hertz = hertz;
     }
 
     public String getScreenResolution() {
@@ -86,7 +86,7 @@ public class Monitor extends Rectangle {
                 "manufacturer='" + manufacturer + '\'' +
                 ", displayType='" + displayType + '\'' +
                 ", colour='" + colour + '\'' +
-                ", gigahertz=" + gigahertz +
+                ", hertz=" + hertz +
                 ", screenResolution='" + screenResolution + '\'' +
                 ", price=" + getPrice() + '\'' +
                 '}';
@@ -97,7 +97,7 @@ public class Monitor extends Rectangle {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Monitor monitor = (Monitor) o;
-        return getGigahertz() == monitor.getGigahertz() &&
+        return getHertz() == monitor.getHertz() &&
                 getManufacturer().equals(monitor.getManufacturer()) &&
                 getDisplayType().equals(monitor.getDisplayType()) &&
                 getColour().equals(monitor.getColour()) &&
@@ -106,7 +106,7 @@ public class Monitor extends Rectangle {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getManufacturer(), getDisplayType(), getColour(), getGigahertz(), getScreenResolution());
+        return Objects.hash(getManufacturer(), getDisplayType(), getColour(), getHertz(), getScreenResolution());
     }
 
     public int getPrice(){
