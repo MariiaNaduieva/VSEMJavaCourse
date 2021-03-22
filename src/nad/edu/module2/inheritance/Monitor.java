@@ -14,7 +14,7 @@ public class Monitor extends Rectangle {
     private String manufacturer;
     private String displayType;
     private String colour;
-    private int gigahertz; // screen update rate
+    private int hertz; // screen update rate
     private String screenResolution;
     int pricePerUnitOfArea = 20;
 
