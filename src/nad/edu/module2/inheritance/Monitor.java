@@ -88,6 +88,7 @@ public class Monitor extends Rectangle {
                 ", colour='" + colour + '\'' +
                 ", gigahertz=" + gigahertz +
                 ", screenResolution='" + screenResolution + '\'' +
+                ", price=" + getPrice() + '\'' +
                 '}';
     }
 
