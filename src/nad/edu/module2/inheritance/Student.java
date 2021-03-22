@@ -23,14 +23,13 @@ public class Student extends Person {
     private boolean livesInDormitory; // whether the student lives in a dormitory
     private String learningType; // extramural or full-time education
     private String formOfStudy; // contract form or state-funded form of education
-    private boolean groupLeader; // whether the student is a group leader or a regular student in the group
 
     public Student() {
     }
 
     public Student(LocalDate dateOfAdmission, String university, String department, String chair,
                    String specialty, String group, String academicDegree, boolean scholarship,
-                   boolean livesInDormitory, String learningType, String formOfStudy, boolean groupLeader) {
+                   boolean livesInDormitory, String learningType, String formOfStudy) {
         this.dateOfAdmission = dateOfAdmission;
         this.university = university;
         this.department = department;
@@ -42,7 +41,6 @@ public class Student extends Person {
         this.livesInDormitory = livesInDormitory;
         this.learningType = learningType;
         this.formOfStudy = formOfStudy;
-        this.groupLeader = groupLeader;
     }
 
     public Student(String firstName, String lastName, String patronymicName, LocalDate dateOfBirth,
@@ -50,9 +48,11 @@ public class Student extends Person {
                    String street, String houseNumber, int flatNumber, String passportId, String maritalStatus,
                    LocalDate dateOfAdmission, String university, String department, String chair, String specialty,
                    String group, String academicDegree, boolean scholarship, boolean livesInDormitory,
-                   String learningType, String formOfStudy, boolean groupLeader) {
+                   String learningType, String formOfStudy) {
+
         super(firstName, lastName, patronymicName, dateOfBirth, gender, citizenship, nationality,
                 country, town, street, houseNumber, flatNumber, passportId, maritalStatus);
+
         this.dateOfAdmission = dateOfAdmission;
         this.university = university;
         this.department = department;
@@ -64,7 +64,6 @@ public class Student extends Person {
         this.livesInDormitory = livesInDormitory;
         this.learningType = learningType;
         this.formOfStudy = formOfStudy;
-        this.groupLeader = groupLeader;
     }
 
     public LocalDate getDateOfAdmission() {
@@ -155,14 +154,6 @@ public class Student extends Person {
         this.formOfStudy = formOfStudy;
     }
 
-    public boolean isGroupLeader() {
-        return groupLeader;
-    }
-
-    public void setGroupLeader(boolean groupLeader) {
-        this.groupLeader = groupLeader;
-    }
-
     @Override
     public String toString() {
         return "Student{" +
@@ -178,7 +169,6 @@ public class Student extends Person {
                 ", livesInDormitory=" + livesInDormitory +
                 ", learningType='" + learningType + '\'' +
                 ", formOfStudy='" + formOfStudy + '\'' +
-                ", groupLeader=" + groupLeader +
                 '}';
     }
 
@@ -190,7 +180,6 @@ public class Student extends Person {
         Student student = (Student) o;
         return isScholarship() == student.isScholarship() &&
                 isLivesInDormitory() == student.isLivesInDormitory() &&
-                isGroupLeader() == student.isGroupLeader() &&
                 getDateOfAdmission().equals(student.getDateOfAdmission()) &&
                 getUniversity().equals(student.getUniversity()) &&
                 getDepartment().equals(student.getDepartment()) &&
@@ -206,6 +195,6 @@ public class Student extends Person {
     public int hashCode() {
         return Objects.hash(super.hashCode(), getDateOfAdmission(), getUniversity(), getDepartment(),
                 getChair(), getSpecialty(), getGroup(), getAcademicDegree(), isScholarship(),
-                isLivesInDormitory(), getLearningType(), getFormOfStudy(), isGroupLeader());
+                isLivesInDormitory(), getLearningType(), getFormOfStudy());
     }
 }
