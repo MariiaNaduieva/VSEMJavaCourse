@@ -58,4 +58,8 @@ public class Rectangle {
     public int hashCode() {
         return Objects.hash(getLength(), getWidth());
     }
+
+    public int getArea(){
+        return this.getLength() * this.getWidth();
+    }
 }

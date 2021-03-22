@@ -16,6 +16,7 @@ public class Monitor extends Rectangle {
     private String colour;
     private int gigahertz; // screen update rate
     private String screenResolution;
+    int pricePerUnitOfArea = 20;
 
     public Monitor() {
     }
@@ -105,5 +106,48 @@ public class Monitor extends Rectangle {
     @Override
     public int hashCode() {
         return Objects.hash(getManufacturer(), getDisplayType(), getColour(), getGigahertz(), getScreenResolution());
+    }
+
+    public int getPrice(){
+        int priceManufacturer = 0;
+        if (this.getManufacturer() == "Asus"){
+            priceManufacturer = 1000;
+        }
+        else if (this.getManufacturer() == "HP"){
+            priceManufacturer = 2000;
+        }
+        else if (this.getManufacturer() == "Samsung"){
+            priceManufacturer = 1500;
+        }
+        else {
+            System.out.println("The material is out of stock");
+        }
+
+        int priceScreenResolution = 0;
+        if (this.getScreenResolution() == "800x600"){
+            priceScreenResolution = 1000;
+        }
+        else if (this.getScreenResolution() == "1024x768"){
+            priceScreenResolution = 1500;
+        }
+        else if (this.getScreenResolution() == "1280x1024"){
+            priceScreenResolution = 2000;
+        }
+        else {
+            System.out.println("The Screen Resolution is out of stock");
+        }
+
+        int priceColour = 0;
+        if (this.getColour() == "black"){
+            priceColour = 1000;
+        }
+        else if (this.getColour() == "white"){
+            priceColour = 1500;
+        }
+        else {
+            System.out.println("The colour is out of stock");
+        }
+
+        return super.getArea()*pricePerUnitOfArea+priceScreenResolution+priceManufacturer+priceColour;
     }
 }
