@@ -56,7 +56,7 @@ public class JavaList {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.add(r1);
+            arrayList.add(i, r1);
         }
         finish = LocalDateTime.now();
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
@@ -66,7 +66,7 @@ public class JavaList {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.add(r1);
+            linkedList.add(i, r1);
         }
         finish = LocalDateTime.now();
         duration = (int) ChronoUnit.MILLIS.between(start, finish);
@@ -82,8 +82,8 @@ public class JavaList {
         // insert to middle Array List
         start = LocalDateTime.now();
 
-        for (int i = middleArrayList; i < middleArrayList + 1000; i++) {
-            arrayList.add(r1);
+        for (int i = 0; i < 1000; i++) {
+            arrayList.add(middleArrayList, r1);
         }
 
         finish = LocalDateTime.now();
@@ -93,8 +93,8 @@ public class JavaList {
         // insert to middle Linked List
         start = LocalDateTime.now();
 
-        for (int i = middleLinkedList; i < middleLinkedList + 1000; i++) {
-            linkedList.add(r1);
+        for (int i = 0; i < 1000; i++) {
+            linkedList.add(middleLinkedList, r1);
         }
 
         finish = LocalDateTime.now();
@@ -106,11 +106,10 @@ public class JavaList {
         System.out.println("INSERT TO TAIL");
 
         // insert to tail Array List
-        int al = arrayList.size();
         start = LocalDateTime.now();
 
-        for (int i = al; i < al + 1000; i++) {
-            arrayList.add(r1);
+        for (int i = 0; i < 1000; i++) {
+            arrayList.add(arrayList.size() - 1, r1);
         }
 
         finish = LocalDateTime.now();
@@ -118,11 +117,10 @@ public class JavaList {
         System.out.println("- Duration to insert to tail Array List: " + duration + " msec");
 
         // insert to tail Linked List
-        int ll = linkedList.size();
         start = LocalDateTime.now();
 
-        for (int i = ll; i < ll + 1000; i++) {
-            linkedList.add(r1);
+        for (int i = 0; i < 1000; i++) {
+            linkedList.add(linkedList.size() - 1, r1);
         }
 
         finish = LocalDateTime.now();
@@ -162,8 +160,8 @@ public class JavaList {
         // update from middle Array List
         start = LocalDateTime.now();
 
-        for (int i = middleArrayList - 500; i < middleArrayList + 500; i++) {
-            arrayList.set(i, r1);
+        for (int i = 0; i < 1000; i++) {
+            arrayList.set(middleArrayList, r1);
         }
 
         finish = LocalDateTime.now();
@@ -173,8 +171,8 @@ public class JavaList {
         // update from middle Linked List
         start = LocalDateTime.now();
 
-        for (int i = middleLinkedList - 500; i < middleLinkedList + 500; i++) {
-            linkedList.set(i, r1);
+        for (int i = 0; i < 1000; i++) {
+            linkedList.set(middleLinkedList, r1);
         }
 
         finish = LocalDateTime.now();
@@ -188,8 +186,8 @@ public class JavaList {
         // update from tail Array List
         start = LocalDateTime.now();
 
-        for (int i = al - 1000; i < al; i++) {
-            arrayList.set(i, r1);
+        for (int i = 0; i < 1000; i++) {
+            arrayList.set(arrayList.size() - 1, r1);
         }
 
         finish = LocalDateTime.now();
@@ -199,8 +197,8 @@ public class JavaList {
         // update from tail Linked List
         start = LocalDateTime.now();
 
-        for (int i = ll - 1000; i < ll; i++) {
-            linkedList.set(i, r1);
+        for (int i = 0; i < 1000; i++) {
+            linkedList.set(linkedList.size() - 1, r1);
         }
 
         finish = LocalDateTime.now();
@@ -215,7 +213,7 @@ public class JavaList {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            arrayList.remove(1000);
+            arrayList.remove(i);
         }
 
         finish = LocalDateTime.now();
@@ -226,7 +224,7 @@ public class JavaList {
         start = LocalDateTime.now();
 
         for (int i = 0; i < 1000; i++) {
-            linkedList.remove(1000);
+            linkedList.remove(i);
         }
 
         finish = LocalDateTime.now();
@@ -240,8 +238,8 @@ public class JavaList {
         // delete from middle Array List
         start = LocalDateTime.now();
 
-        for (int i = middleArrayList - 500; i < middleArrayList + 500; i++) {
-            arrayList.remove(1000);
+        for (int i = 0; i < 1000; i++) {
+            arrayList.remove(middleArrayList);
         }
 
         finish = LocalDateTime.now();
@@ -251,8 +249,8 @@ public class JavaList {
         // delete from middle Linked List
         start = LocalDateTime.now();
 
-        for (int i = middleLinkedList - 500; i < middleLinkedList + 500; i++) {
-            linkedList.remove(1000);
+        for (int i = 0; i < 1000; i++) {
+            linkedList.remove(middleLinkedList);
         }
 
         finish = LocalDateTime.now();
@@ -267,8 +265,8 @@ public class JavaList {
         // delete from tail Array List
         start = LocalDateTime.now();
 
-        for (int i = al; i > al - 1000; i--) {
-            arrayList.remove(1000);
+        for (int i = 0; i < 1000; i++) {
+            arrayList.remove(arrayList.size() - 1);
         }
 
         finish = LocalDateTime.now();
@@ -278,8 +276,8 @@ public class JavaList {
         // delete from tail Linked List
         start = LocalDateTime.now();
 
-        for (int i = ll; i > ll - 1000; i--) {
-            linkedList.remove(1000);
+        for (int i = 0; i < 1000; i++) {
+            linkedList.remove(linkedList.size() - 1);
         }
 
         finish = LocalDateTime.now();
@@ -293,65 +291,65 @@ public class JavaList {
 
 /*
 CREATE
-- Duration to create Array List: 146 msec
-- Duration to create Linked List: 59 msec
+- Duration to create Array List: 277 msec
+- Duration to create Linked List: 57 msec
 Array List size: 100000
 Linked List size: 100000
 
 INSERT TO HEAD
-- Duration to insert to head Array List: 0 msec
-- Duration to insert to head Linked List: 0 msec
+- Duration to insert to head Array List: 125 msec
+- Duration to insert to head Linked List: 22 msec
 Array List size: 101000
 Linked List size: 101000
 
 INSERT TO MIDDLE
-- Duration to insert to middle Array List: 0 msec
-- Duration to insert to middle Linked List: 1 msec
+- Duration to insert to middle Array List: 36 msec
+- Duration to insert to middle Linked List: 405 msec
 Array List size: 102000
 Linked List size: 102000
 
 INSERT TO TAIL
 - Duration to insert to tail Array List: 0 msec
-- Duration to insert to tail Linked List: 2 msec
+- Duration to insert to tail Linked List: 0 msec
 Array List size: 103000
 Linked List size: 103000
 
 UPDATE FROM HEAD
-- Duration to update from head Array List: 1 msec
-- Duration to update from head Linked List: 17 msec
+- Duration to update from head Array List: 0 msec
+- Duration to update from head Linked List: 2 msec
 Array List size: 103000
 Linked List size: 103000
 
 UPDATE FROM MIDDLE
 - Duration to update from middle Array List: 1 msec
-- Duration to update from middle Linked List: 409 msec
+- Duration to update from middle Linked List: 380 msec
 Array List size: 103000
 Linked List size: 103000
 
 UPDATE FROM TAIL
 - Duration to update from tail Array List: 1 msec
-- Duration to update from tail Linked List: 80 msec
+- Duration to update from tail Linked List: 0 msec
 Array List size: 103000
 Linked List size: 103000
 
 DELETE FROM HEAD
-- Duration to delete from head Array List: 56 msec
-- Duration to delete from head Linked List: 3 msec
+- Duration to delete from head Array List: 82 msec
+- Duration to delete from head Linked List: 1 msec
 Array List size: 102000
 Linked List size: 102000
 
 DELETE FROM MIDDLE
-- Duration to delete from middle Array List: 40 msec
-- Duration to delete from middle Linked List: 3 msec
+- Duration to delete from middle Array List: 18 msec
+- Duration to delete from middle Linked List: 363 msec
 Array List size: 101000
 Linked List size: 101000
 
 DELETE FROM TAIL
-- Duration to delete from tail Array List: 36 msec
-- Duration to delete from tail Linked List: 4 msec
+- Duration to delete from tail Array List: 0 msec
+- Duration to delete from tail Linked List: 0 msec
 Array List size: 100000
 Linked List size: 100000
 
-conclusion: when creating, deleting elements from the beginning, middle and end of the Linked List is faster.
-In other operations Array List is better.
+conclusion: If you insert or delete a lot of items in the middle of a collection,
+it is better to use LinkedList. In all other cases, use ArrayList.
  */
