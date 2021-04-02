@@ -350,6 +350,6 @@ DELETE FROM TAIL
 Array List size: 100000
 Linked List size: 100000
 
-conclusion: If you insert or delete a lot of items in the middle of a collection,
+Conclusion: If you insert or delete a lot of items in the middle of a collection,
 it is better to use LinkedList. In all other cases, use ArrayList.
  */
