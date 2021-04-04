@@ -162,6 +162,7 @@ public class JavaList {
 
         for (int i = 0; i < 1000; i++) {
             arrayList.set(middleArrayList, r1);
+            middleArrayList++;
         }
 
         finish = LocalDateTime.now();
@@ -173,6 +174,7 @@ public class JavaList {
 
         for (int i = 0; i < 1000; i++) {
             linkedList.set(middleLinkedList, r1);
+            middleLinkedList++;
         }
 
         finish = LocalDateTime.now();
@@ -322,7 +324,7 @@ Linked List size: 103000
 
 UPDATE FROM MIDDLE
 - Duration to update from middle Array List: 1 msec
-- Duration to update from middle Linked List: 380 msec
+- Duration to update from middle Linked List: 206 msec
 Array List size: 103000
 Linked List size: 103000
 
@@ -334,7 +336,7 @@ Linked List size: 103000
 
 DELETE FROM HEAD
 - Duration to delete from head Array List: 82 msec
-- Duration to delete from head Linked List: 1 msec
+- Duration to delete from head Linked List: 4 msec
 Array List size: 102000
 Linked List size: 102000
 
@@ -350,6 +352,6 @@ DELETE FROM TAIL
 Array List size: 100000
 Linked List size: 100000
 
-Conclusion: If you insert or delete a lot of items in the middle of a collection,
+Conclusion: If you insert or delete a lot of items of a collection,
 it is better to use LinkedList. In all other cases, use ArrayList.
  */
