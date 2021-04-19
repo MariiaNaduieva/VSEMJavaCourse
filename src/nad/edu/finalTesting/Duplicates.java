@@ -13,16 +13,16 @@ import java.util.Arrays;
 public class Duplicates {
     public static boolean hasDuplicates(int[] array) {
         Arrays.sort(array);
-        boolean result = false;
+        boolean hasDuplicates = false;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
-                    result = true;
+                    hasDuplicates = true;
                     break;
                 }
             }
         }
-        return result;
+        return hasDuplicates;
     }
 
     public static void main(String[] args) {
