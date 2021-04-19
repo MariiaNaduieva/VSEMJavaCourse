@@ -13,20 +13,20 @@ import java.util.Arrays;
 public class RightShift {
     public static int[] rightShift(int[] array, int step) {
         int[] newArray = new int[array.length];
-        int newIndex = 0;
-        int newStep = 0;
+        int index = 0;
+        int step2 = 0;
         if (step >= array.length) {
-            newStep = step % array.length;
+            step2 = step % array.length;
         } else {
-            newStep = step;
+            step2 = step;
         }
 
         for (int i = 0; i < array.length; i++) {
-            newIndex = i + newStep;
-            if (i + newStep >= array.length) {
-                newIndex = i + newStep - array.length;
+            index = i + step2;
+            if (i + step2 >= array.length) {
+                index = i + step2 - array.length;
             }
-            newArray[newIndex] = array[i];
+            newArray[index] = array[i];
         }
         return newArray;
     }
