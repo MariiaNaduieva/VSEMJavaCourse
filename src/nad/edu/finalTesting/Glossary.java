@@ -49,4 +49,27 @@ public class Glossary {
         Files.write(Paths.get(fileOutput), sorted20.getBytes());
     }
 }
+/*
+--- First 20 distinct word in Harry Potter by the number of occurrence ---
+the 3628
+and 1919
+to 1856
+a 1688
+he 1528
+of 1259
+harry 1214
+was 1186
+it 1026
+in 964
+his 937
+you 863
+said 794
+had 702
+i 652
+on 636
+at 625
+that 601
+they 597
+as 526
+ */
 
